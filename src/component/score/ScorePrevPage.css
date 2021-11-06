@@ -1,0 +1,75 @@
+body {
+    border-radius: 10px
+  }
+  
+  .ScoreLink, .ScoreLink:hover, .ScoreLink:active, .ScoreLink:visited { 
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .sp-bubble {
+    width: 800px;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    font-family: arial;
+    position: relative;
+  }
+  
+  
+  
+  .sp-bubble:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid rgb(51, 51, 51);
+    right: 50%;
+    top: -18px;
+  }
+  
+  .card {
+    width: 600px;
+    height: 300px;
+    border: solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  .stats {
+    background: #f2f5f8 !important;
+    color: #000 !important
+  }
+  
+  .articles {
+    font-size: 10px;
+    color: #a1aab9
+  }
+  
+  .number1 {
+    font-weight: 500
+  }
+  
+  .followers {
+    font-size: 10px;
+    color: #a1aab9
+  }
+  
+  .number2 {
+    font-weight: 500
+  }
+  
+  .rating {
+    font-size: 10px;
+    color: #a1aab9
+  }
+  
+  .number3 {
+    font-weight: 500
+  }

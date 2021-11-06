@@ -6,6 +6,8 @@ import LoginPage from "./component/login/LoginPage";
 import RegisterPage from './component/register/RegisterPage';
 import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
+import ScorePrevPage from './component/score/ScorePrevPage';
+import ScorePage from './component/score/ScorePage';
 import Navbar from './component/navbar';
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="findteam" element={<FindTeam/>}/>
         <Route path='tableadd' element={<TableAdd/>}/>
+        <Route path='scorePrev' element={<ScorePrevPage/>}/>
+        <Route path='score' element={<ScorePage/>}/>
       </Routes>
     </Router>
   );
