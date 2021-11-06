@@ -1,5 +1,5 @@
 import React from 'react';
-import UserReq from './UserReq';
+import UserReq from './InfoReq';
 import Navbar from "../navbar";
 
 export default function MyInfo() {

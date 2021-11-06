@@ -1,5 +1,5 @@
 import React from 'react';
-import UserReq from './UserReq';
+import UserReq from './InfoReq';
 import Navbar from "../navbar";
 
 export default function UserInfo() {
@@ -21,7 +21,7 @@ export default function UserInfo() {
       <UserReq num='Participation' user={userID}></UserReq>
       <UserReq num='Comment' user={userID}></UserReq>
       <div style={{position:"absolute",left:"480px",top:"830px"}}>
-        <input onChange={onChange} type="text" size="114"/>
+        <input onChange={onChange} type="text" size="100"/>
         <button onClick={handleClick}>leave comment</button>
       </div>
     </div>
