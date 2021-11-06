@@ -6,6 +6,8 @@ import LoginPage from "./component/login/LoginPage";
 import RegisterPage from './component/register/RegisterPage';
 import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
+import UserInfoPage from './component/userinfo/UserInfoPage'
+import MyInfoPage from './component/userinfo/MyInfoPage'
 import Navbar from './component/navbar';
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="findteam" element={<FindTeam/>}/>
         <Route path='tableadd' element={<TableAdd/>}/>
+        <Route path='userinfo' element={<UserInfo/>}/>
+        <Route path='myinfo' element={<MyInfo/>}/>
       </Routes>
     </Router>
   );
@@ -52,6 +56,17 @@ function TableAdd(){
     <TableAddPage/>
   )
 }
+function UserInfo(){
+  return(
+    <UserInfoPage/>
+  )
+}
+function MyInfo(){
+  return(
+    <MyInfoPage/>
+  )
+}
+
 
 
 export default App;

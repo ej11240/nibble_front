@@ -1,0 +1,149 @@
+.UserImg{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 550px;
+    top: 180px;
+    background-position:center;
+    border: 1px solid rgba(145, 145, 145, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 7px;
+}
+
+.UserName{
+    position: absolute;
+    left: 550px;
+    top: 445px;
+    background: #DEDEDE;
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    font-family: Inter;
+    font-size: 14px;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 3px;
+    padding-left : 10px;
+}
+.UserMail{
+    position: absolute;
+    height: 15px;
+    width: 235px;
+    line-height: 15px;
+    left: 550px;
+    top: 525px;
+    text-align : left;
+    padding: 7px;
+}
+.UserParticipation{
+    position: absolute;
+    height: 159px;
+    left: 1000px;    
+    top: 240px;
+    font-size:100px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.Participation{
+    position: absolute;
+    height: 159px;
+    left: 1000px;
+    top: 150px;
+    font-size:50px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+.Frame{
+    position: absolute;
+    width: 350px;
+    height: 460px;
+    left: 500px;
+    top: 150px;
+    background: #ffffff;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    z-index:-1;
+}
+.Comment1{
+    position: absolute;
+    height: 15px;
+    line-height: 15px;
+    left: 480px;
+    right: 500px;
+    top: 715px;
+    background: #e7e7e7;
+    text-align : left;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 3px;
+    padding: 7px;
+}
+.Comment2{
+    position: absolute;
+    height: 15px;
+    line-height: 15px;
+    left: 480px;
+    right: 500px;
+    top: 750px;
+    background: #e7e7e7;
+    text-align : left;
+    padding: 7px;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 3px;
+}
+.Comment3{
+    position: absolute;
+    height: 15px;
+    line-height: 15px;
+    left: 480px;
+    right: 500px;
+    top: 785px;
+    background: #e7e7e7;
+    text-align : left;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 3px;
+    padding: 7px;
+}
+.Frame2{
+    position: absolute;
+    height: 200px;
+    line-height: 15px;
+    left: 450px;
+    right: 450px;
+    top: 695px;
+    background: #ffffff;
+    border: 1px solid rgba(99, 98, 98, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    z-index:-1;
+}
+.t1{
+    position: absolute;
+    height: 25px;
+    left: 500px;
+    right: 1080px;
+    top: 110px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+    color: rgb(65, 65, 65);
+}
+.t2{
+    position: absolute;
+    height: 23.49px;
+    left: 480px;
+    right: 955.56px;
+    top: 660px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.56);
+}
