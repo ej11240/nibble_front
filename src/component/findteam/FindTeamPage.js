@@ -1,5 +1,5 @@
 import "./FindTeamPage.css";
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../navbar";
@@ -12,6 +12,36 @@ import StickyBox from "react-sticky-box";
 export default function FindTeamPage() {
 
     const [datas, setDatas] = useState([]);
+    // api/post_list/
+    const [list, setList] = useState([]);
+
+
+
+    const sendServerLogin = () => {
+
+        // axios ...
+        axios
+            .post("http://192.168.12.94" + ":8080/api/post_list/" + localStorage.getItem("userIdx"), {
+
+            }, {
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                }
+            }
+            )
+            .then(function (response) {
+                // localStorage.setItem("userIdx", response.data.userIdx);
+                // localStorage.setItem("email", id);
+                // localStorage.setItem("name",response.data.test_id);
+                setList(response.data.post_list);
+            })
+
+    }
+
+    useEffect(() => {
+        sendServerLogin();
+    }, [])
+
 
     return (
         <div>
@@ -52,97 +82,36 @@ export default function FindTeamPage() {
                         </td>
                     </tr>
 
-                    <tr style={{ height: '20px' }}>
-                    </tr>
-                    <tr style={{ alignContent: 'center', height: '100px' }}>
-                        <td colspan='2' style={{ alignContent: 'center', width: '100%' }}>
-                            <div style={{ border: '1px solid #DEDEDE', borderRadius: '3px', }}>
-                                <div style={{ backgroundColor: "#F5F5F5", paddingLeft: 40, paddingRight: '40px', verticalAlign: 'middle', paddingTop: '20px', paddingBottom: '20px' }}>
-                                    <text style={{}}>
-                                        캡디 수업 ㅂㅅㅇ교수님 함께할 프엔 백엔 모집합니다
-                                    </text>
-                                </div>
-                                <div style={{ paddingTop: '20px', paddingLeft: 40, paddingRight: '40px', paddingBottom: '20px' }}>
-                                    ~~과목 팀플 함께한 팀원을 모집합니다 ~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다.
+                    {list.map(t => {
+                        return (
+                            <>
+                                <tr style={{ height: '20px' }}>
+                                </tr>
+                                <tr style={{ alignContent: 'center', height: '100px' }}>
+                                    <td colspan='2' style={{ alignContent: 'center', width: '100%' }}>
+                                        <div style={{ border: '1px solid #DEDEDE', borderRadius: '3px', }}>
+                                            <div style={{ backgroundColor: "#F5F5F5", paddingLeft: 40, paddingRight: '40px', verticalAlign: 'middle', paddingTop: '20px', paddingBottom: '20px' }}>
+                                                <text style={{}}>
+                                                    캡디 수업 ㅂㅅㅇ교수님 함께할 프엔 백엔 모집합니다
+                                                </text>
+                                            </div>
+                                            <div style={{ paddingTop: '20px', paddingLeft: 40, paddingRight: '40px', paddingBottom: '20px' }}>
+                                                {t}
 
-                                </div>
-                                <div style={{ width: '100%', height: '50px' }}>
-                                    <div style={{ height: '50px', float: 'right' }} >
-                                        <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}><text style={{ color: '#ffffff' }}> 참가 요청하기 </text></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                                            </div>
+                                            <div style={{ width: '100%', height: '50px' }}>
+                                                <div style={{ height: '50px', float: 'right' }} >
+                                                    <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}><text style={{ color: '#ffffff' }}> 참가 요청하기 </text></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </>
+                        )
+                    })}
 
-                    <tr style={{ height: '20px' }}>
-                    </tr>
-                    <tr style={{ alignContent: 'center', height: '100px' }}>
-                        <td colspan='2' style={{ alignContent: 'center', width: '100%' }}>
-                            <div style={{ border: '1px solid #DEDEDE', borderRadius: '3px', }}>
-                                <div style={{ backgroundColor: "#F5F5F5", paddingLeft: 40, paddingRight: '40px', verticalAlign: 'middle', paddingTop: '20px', paddingBottom: '20px' }}>
-                                    <text style={{}}>
-                                        캡디 수업 ㅂㅅㅇ교수님 함께할 프엔 백엔 모집합니다
-                                    </text>
-                                </div>
-                                <div style={{ paddingTop: '20px', paddingLeft: 40, paddingRight: '40px', paddingBottom: '20px' }}>
-                                    ~~과목 팀플 함께한 팀원을 모집합니다 ~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다.
 
-                                </div>
-                                <div style={{ width: '100%', height: '50px' }}>
-                                    <div style={{ height: '50px', float: 'right' }} >
-                                        <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}><text style={{ color: '#ffffff' }}> 참가 요청하기 </text></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr style={{ height: '20px' }}>
-                    </tr>
-                    <tr style={{ alignContent: 'center', height: '100px' }}>
-                        <td colspan='2' style={{ alignContent: 'center', width: '100%' }}>
-                            <div style={{ border: '1px solid #DEDEDE', borderRadius: '3px', }}>
-                                <div style={{ backgroundColor: "#F5F5F5", paddingLeft: 40, paddingRight: '40px', verticalAlign: 'middle', paddingTop: '20px', paddingBottom: '20px' }}>
-                                    <text style={{}}>
-                                        캡디 수업 ㅂㅅㅇ교수님 함께할 프엔 백엔 모집합니다
-                                    </text>
-                                </div>
-                                <div style={{ paddingTop: '20px', paddingLeft: 40, paddingRight: '40px', paddingBottom: '20px' }}>
-                                    ~~과목 팀플 함께한 팀원을 모집합니다 ~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다.
-
-                                </div>
-                                <div style={{ width: '100%', height: '50px' }}>
-                                    <div style={{ height: '50px', float: 'right' }} >
-                                        <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}><text style={{ color: '#ffffff' }}> 참가 요청하기 </text></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr style={{ height: '20px' }}>
-                    </tr>
-                    <tr style={{ alignContent: 'center', height: '100px' }}>
-                        <td colspan='2' style={{ alignContent: 'center', width: '100%' }}>
-                            <div style={{ border: '1px solid #DEDEDE', borderRadius: '3px', }}>
-                                <div style={{ backgroundColor: "#F5F5F5", paddingLeft: 40, paddingRight: '40px', verticalAlign: 'middle', paddingTop: '20px', paddingBottom: '20px' }}>
-                                    <text style={{}}>
-                                        캡디 수업 ㅂㅅㅇ교수님 함께할 프엔 백엔 모집합니다
-                                    </text>
-                                </div>
-                                <div style={{ paddingTop: '20px', paddingLeft: 40, paddingRight: '40px', paddingBottom: '20px' }}>
-                                    ~~과목 팀플 함께한 팀원을 모집합니다 ~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다~~과목 팀플 함께한 팀원을 모집합니다.
-
-                                </div>
-                                <div style={{ width: '100%', height: '50px' }}>
-                                    <div style={{ height: '50px', float: 'right' }} >
-                                        <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}><text style={{ color: '#ffffff' }}> 참가 요청하기 </text></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
 
 
                 </table>

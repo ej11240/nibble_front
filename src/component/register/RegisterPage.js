@@ -11,21 +11,41 @@ export default function RegisterPage() {
 
     // let history = useHistory();
 
-    const logintomain = React.useRef(null);
-
-
-    const [id, setId] = useState('');
+    const [email, setEmail] = useState('');
     const onIdChange = (e) => {
-        setId(e.target.value);
+        setEmail(e.target.value);
     }
     const [pw, setPw] = useState('');
     const onPwChange = (e) => {
         setPw(e.target.value);
     }
+    const[name, setName] = useState('');
+    const onNameChange=(e)=>{
+        setName(e.target.value);
+    }
 
-    const sendServerLogin = () => {
+
+
+    const sendServerRegister = () => {
 
         // axios ...
+        axios
+            .post("http://192.168.12.94" + ":8080/api/user/register", {
+                email:email,
+                password:pw,
+                name:name
+        }, {
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                }
+            }
+            )
+            .then(function (response) {
+                localStorage.setItem("userIdx", response.data.userIdx);
+                localStorage.setItem("email", email);
+                localStorage.setItem("name",response.data.test_id);
+            })
+
     }
 
 
@@ -44,6 +64,8 @@ export default function RegisterPage() {
                             label="email"
                             style={{ width: '300px' }}
                             variant="standard"
+                            value={email}
+                            onChange={onIdChange}
                             startAdornment={
                                 <InputAdornment position="start">
                                     <BiUserCircle />
@@ -57,6 +79,8 @@ export default function RegisterPage() {
                             type="password"
                             autoComplete="current-password"
                             variant="standard"
+                            value={pw}
+                            onChange={onPwChange}
                         />
                         <div style={{ height: '40px', }}></div>
                         <TextField
@@ -73,6 +97,8 @@ export default function RegisterPage() {
                             label="닉네임"
                             style={{ width: '300px' }}
                             variant="standard"
+                            value={name}
+                            onChange={onNameChange}
                             startAdornment={
                                 <InputAdornment position="start">
                                     <BiUserCircle />
@@ -82,7 +108,7 @@ export default function RegisterPage() {
 
                     <div style={{ marginTop: '40px' }}>
                         <Link to="/" className="Login_link">
-                            <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}>
+                            <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { sendServerRegister();} }>
                                 <text style={{  fontSize:'20px', color: '#ffffff', paddingLeft: '40px', paddingRight: '40px', paddingTop: '5px', paddingBottom: '5px' }}> 회원가입 </text>
                             </button>
                         </Link>

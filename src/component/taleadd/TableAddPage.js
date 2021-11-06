@@ -14,15 +14,6 @@ import Avatar from "@material-ui/core/Avatar";
 
 import PropTypes from 'prop-types';
 
-const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-    },
-    input: {
-        display: 'none',
-    },
-});
-
 
 export default function TableAddPage(props) {
 
@@ -53,7 +44,7 @@ export default function TableAddPage(props) {
                 </div>
 
                 <div style={{ marginTop: '50px' }}>
-                    <Link to="/findteam" className="Login_link">
+                    <Link to="/lectureset" className="Login_link">
                         <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}>
                             <text style={{ fontSize: '20px', color: '#ffffff', paddingLeft: '40px', paddingRight: '40px', paddingTop: '5px', paddingBottom: '5px' }}> 건너뛰기 </text>
                         </button>

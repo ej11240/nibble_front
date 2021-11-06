@@ -13,7 +13,7 @@ import ScorePage from './component/score/ScorePage';
 import IdInputPage from './component/Home/Home';
 import ChatRoomPage from './component/ChatRoom/ChatRoom';
 import Navbar from './component/navbar';
-
+import LectureSetPage from './component/lectureset/LectureSetPage';
 
 
 function App() {
@@ -21,15 +21,16 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="register" element={<Register/>}/>
-        <Route path="findteam" element={<FindTeam/>}/>
-        <Route path='tableadd' element={<TableAdd/>}/>
-        <Route path='userinfo' element={<UserInfo/>}/>
-        <Route path='myinfo' element={<MyInfo/>}/>
-        <Route path='scorePrev' element={<ScorePrevPage/>}/>
-        <Route path='score' element={<ScorePage/>}/>
-        <Route path='chat' element={<IdInputPage/>}/>
-        <Route path="/:roomId" element={<ChatRoomPage/>} />
+        <Route path="register" exact element={<Register/>}/>
+        <Route path="findteam" exact element={<FindTeam/>}/>
+        <Route path='tableadd' exact element={<TableAdd/>}/>
+        <Route path='userinfo' exact element={<UserInfo/>}/>
+        <Route path='myinfo' exact element={<MyInfo/>}/>
+        <Route path='scorePrev' exact element={<ScorePrevPage/>}/>
+        <Route path='score' exact element={<ScorePage/>}/>
+        <Route path='chat' exact element={<IdInputPage/>}/>
+        <Route path="/:roomId" exact element={<ChatRoomPage/>} />
+        <Route path='lectureset' exact element={<Lectureset/>} />
       </Routes>
     </Router>
   );
@@ -79,6 +80,12 @@ function IdInput(){
 function Chat(){
   return(
     <ChatRoomPage/>
+  )
+}
+
+function Lectureset(){
+  return(
+    <LectureSetPage/>
   )
 }
 

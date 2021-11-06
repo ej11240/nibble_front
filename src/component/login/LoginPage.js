@@ -23,9 +23,27 @@ export default function LoginPage() {
         setPw(e.target.value);
     }
 
+
+
     const sendServerLogin = () => {
 
         // axios ...
+        axios
+            .post("http://192.168.12.94" + ":8080/api/user/login", {
+                email:id,
+                password:pw
+        }, {
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                }
+            }
+            )
+            .then(function (response) {
+                localStorage.setItem("userIdx", response.data.userIdx);
+                localStorage.setItem("email", id);
+                localStorage.setItem("name",response.data.test_id);
+            })
+
     }
 
 
@@ -44,6 +62,8 @@ export default function LoginPage() {
                             label="이메일"
                             style={{ width: '300px' }}
                             variant="standard"
+                            value={id}
+                            onChange={onIdChange}
                             startAdornment={
                                 <InputAdornment position="start">
                                     <BiUserCircle />
@@ -57,16 +77,18 @@ export default function LoginPage() {
                             type="password"
                             autoComplete="current-password"
                             variant="standard"
+                            value={pw}
+                            onChange={onPwChange}
                         />
-                        <div style={{height:'20px', marginTop:'50px'}} >
+                        <div style={{ height: '20px', marginTop: '50px' }} >
                             <Link to="/register" ><text style={{}}>회원가입</text></Link>
                         </div>
                     </div>
 
                     <div style={{ marginTop: '50px' }}>
                         <Link to="/tableadd" className="Login_link">
-                            <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => { }}>
-                                <text style={{  fontSize:'20px', color: '#ffffff', paddingLeft: '40px', paddingRight: '40px', paddingTop: '5px', paddingBottom: '5px' }}> Login </text>
+                            <button style={{ borderRadius: '24px', backgroundColor: '#000000', paddingTop: '5px', paddingBottom: '5px' }} onClick={() => {sendServerLogin(); }}>
+                                <text style={{ fontSize: '20px', color: '#ffffff', paddingLeft: '40px', paddingRight: '40px', paddingTop: '5px', paddingBottom: '5px' }}> Login </text>
                             </button>
                         </Link>
                     </div>
@@ -74,5 +96,5 @@ export default function LoginPage() {
             </div>
         </div>
     );
-    
+
 }
