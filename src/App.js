@@ -6,30 +6,15 @@ import LoginPage from "./component/login/LoginPage";
 import RegisterPage from './component/register/RegisterPage';
 import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
-<<<<<<< HEAD
-import ScorePage from './component/score/ScorePage';
-import ScorePrevPage from './component/score/ScorePrevPage';
-=======
+import UserInfoPage from './component/userinfo/UserInfoPage'
+import MyInfoPage from './component/userinfo/MyInfoPage'
 import ScorePrevPage from './component/score/ScorePrevPage';
 import ScorePage from './component/score/ScorePage';
 import IdInputPage from './component/Home/Home';
 import ChatRoomPage from './component/ChatRoom/ChatRoom';
->>>>>>> brchS
 import Navbar from './component/navbar';
 
 
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar/>
-//       <Routes>
-//         <Route path="/"   component={<LoginPage/>} />
-//         <Route path="register" exact component={<RegisterPage/>} />
-//         <Route path="findteam" exact component={<FindTeamPage/>} />
-//       </Routes>
-//     </Router>
-//   );
-// }
 
 function App() {
   return (
@@ -39,15 +24,12 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="findteam" element={<FindTeam/>}/>
         <Route path='tableadd' element={<TableAdd/>}/>
-<<<<<<< HEAD
-        <Route path='score' element={<ScorePage/>}/>
-        <Route path='scorePrev' element={<ScorePrevPage/>}/>
-=======
+        <Route path='userinfo' element={<UserInfo/>}/>
+        <Route path='myinfo' element={<MyInfo/>}/>
         <Route path='scorePrev' element={<ScorePrevPage/>}/>
         <Route path='score' element={<ScorePage/>}/>
         <Route path='chat' element={<IdInputPage/>}/>
         <Route path="/:roomId" element={<ChatRoomPage/>} />
->>>>>>> brchS
       </Routes>
     </Router>
   );
@@ -64,12 +46,42 @@ function Register(){
     <RegisterPage/>
   )
 }
-
 function TableAdd(){
   return(
     <TableAddPage/>
   )
 }
+function UserInfo(){
+  return(
+    <UserInfoPage/>
+  )
+}
+function MyInfo(){
+  return(
+    <MyInfoPage/>
+  )
+}
+function ScorePrev(){
+  return(
+    <ScorePrevPage/>
+  )
+}
+function Score(){
+  return(
+    <Score/>
+  )
+}
+function IdInput(){
+  return(
+    <IdInputPage/>
+  )
+}
+function Chat(){
+  return(
+    <ChatRoomPage/>
+  )
+}
+
 
 
 export default App;
