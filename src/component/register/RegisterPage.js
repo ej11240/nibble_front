@@ -5,6 +5,7 @@ import axios from "axios";
 import TextField from '@mui/material/TextField';
 import { BiUserCircle } from "react-icons/bi";
 import InputAdornment from '@mui/material/InputAdornment';
+import logo from '../../img/timetable.png'
 
 export default function RegisterPage() {
 
@@ -34,7 +35,8 @@ export default function RegisterPage() {
             <div className="Loginpage">
                 <div style={{ textAlign: 'center', height: '100vh', marginTop: '150px' }}>
                     <div style={{ alignSelf: 'center' }}>
-                        <img alt="img" src="https://menu.mt.co.kr/moneyweek/thumb/2020/10/26/06/2020102617278019215_1.jpg" />
+                    <img width="100px" alt="img" src={logo} /><br />
+                    <span class="mb-4 font-weight-bold">TEAMTABLE</span>
                     </div>
                     <div>
                         <TextField

@@ -10,3 +10,23 @@
     width: 100vw;
     padding-bottom: 5rem;
 }
+
+a, a:hover, a:active, a:visited { 
+    color: white;
+    text-decoration: none;
+  }
+
+.filter-tab {
+    margin-top: 10%;
+    margin-right:10%;
+    display: block;
+    box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+.filter-btn {
+    border:none;
+    border-top: solid grey 1px;
+    width:100%;
+    height: 50px;
+}
+

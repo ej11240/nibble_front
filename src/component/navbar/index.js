@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../../img/timetable.png'
 import {
     Nav,
     NavLogo,
@@ -19,7 +20,8 @@ const Navbar = () => {
         <>
            <Nav>
             <NavLogo to="/">
-                Logo
+                <img width="50px" alt="img" src={logo} />
+                <span class="font-weight-bold ml-2">TEAMTABLE</span>
             </NavLogo>
             <Bars />
 
