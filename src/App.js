@@ -8,6 +8,8 @@ import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
 import ScorePrevPage from './component/score/ScorePrevPage';
 import ScorePage from './component/score/ScorePage';
+import IdInputPage from './component/Home/Home';
+import ChatRoomPage from './component/ChatRoom/ChatRoom';
 import Navbar from './component/navbar';
 
 
@@ -34,6 +36,8 @@ function App() {
         <Route path='tableadd' element={<TableAdd/>}/>
         <Route path='scorePrev' element={<ScorePrevPage/>}/>
         <Route path='score' element={<ScorePage/>}/>
+        <Route path='chat' element={<IdInputPage/>}/>
+        <Route path="/:roomId" element={<ChatRoomPage/>} />
       </Routes>
     </Router>
   );

@@ -1,5 +1,5 @@
 import './ScorePage.css';
-
+import { Link } from "react-router-dom";
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
@@ -79,7 +79,9 @@ function App() {
                   </div>
                   <div>
                       <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-sm textarea"></textarea></div>
-                      <div class="mt-2 text-right"><button class="btn btn-light btn-sm shadow-none" type="button">평가 완료 →</button></div>
+                      <div class="mt-2 text-right">
+                      <Link to="/findteam"><button class="btn btn-light btn-sm shadow-none" type="button">평가 완료 →</button>
+                      </Link></div>
                       {/* onClick => 평가점수, 코멘트 전송 및 저장 */}
                   </div>
               </div>
