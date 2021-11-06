@@ -1,0 +1,73 @@
+body {
+  border-radius: 10px
+}
+
+.container {
+  width: 1000px;
+}
+
+.profile {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff
+}
+
+.profile-icon {
+  width: 100px;
+  height: 100px;
+  background-color: lightgrey;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 30px;
+}
+
+.rating {
+  font-size: 10px;
+  color: #a1aab9
+}
+
+
+
+
+.date {
+  font-size: 11px
+}
+
+.comment-text {
+  font-size: 12px
+}
+
+.fs-12 {
+  font-size: 12px
+}
+
+.shadow-none {
+  box-shadow: none
+}
+
+.name {
+  color: #007bff
+}
+
+.cursor:hover {
+  color: blue
+}
+
+.cursor {
+  cursor: pointer
+}
+
+.textarea {
+  resize: none
+}
+
+.btn {
+width:120px;
+border:solid grey 1px;
+border-radius: 20px;
+padding-top:7px;
+padding-bottom: 7px;
+}
