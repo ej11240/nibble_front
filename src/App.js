@@ -8,6 +8,8 @@ import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
 import UserInfoPage from './component/userinfo/UserInfoPage'
 import MyInfoPage from './component/userinfo/MyInfoPage'
+import ScorePage from './component/score/ScorePage';
+import ScorePrevPage from './component/score/ScorePrevPage';
 import Navbar from './component/navbar';
 
 
@@ -34,6 +36,8 @@ function App() {
         <Route path='tableadd' element={<TableAdd/>}/>
         <Route path='userinfo' element={<UserInfo/>}/>
         <Route path='myinfo' element={<MyInfo/>}/>
+        <Route path='score' element={<ScorePage/>}/>
+        <Route path='scorePrev' element={<ScorePrevPage/>}/>
       </Routes>
     </Router>
   );
@@ -50,7 +54,6 @@ function Register(){
     <RegisterPage/>
   )
 }
-
 function TableAdd(){
   return(
     <TableAddPage/>

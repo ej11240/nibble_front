@@ -1,10 +1,11 @@
 import React from 'react';
 import UserReq from './UserReq';
+import Navbar from "../navbar";
 
 export default function UserInfo() {
   var data
   const onChange = (e) => {
-    data = e.target
+    data = e.target.value
   }
   function handleClick(e) {
     e.preventDefault();
@@ -14,6 +15,7 @@ export default function UserInfo() {
   var userID = 2;
   return (
     <div className="UserInfo">
+      <div><Navbar /></div>
       <UserReq num='UserInfo' user={userID}></UserReq>
       <UserReq num='Frame' user={userID}></UserReq>
       <UserReq num='Participation' user={userID}></UserReq>
