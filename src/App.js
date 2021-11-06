@@ -6,8 +6,15 @@ import LoginPage from "./component/login/LoginPage";
 import RegisterPage from './component/register/RegisterPage';
 import FindTeamPage from './component/findteam/FindTeamPage';
 import TableAddPage from './component/taleadd/TableAddPage';
+<<<<<<< HEAD
 import ScorePage from './component/score/ScorePage';
 import ScorePrevPage from './component/score/ScorePrevPage';
+=======
+import ScorePrevPage from './component/score/ScorePrevPage';
+import ScorePage from './component/score/ScorePage';
+import IdInputPage from './component/Home/Home';
+import ChatRoomPage from './component/ChatRoom/ChatRoom';
+>>>>>>> brchS
 import Navbar from './component/navbar';
 
 
@@ -32,8 +39,15 @@ function App() {
         <Route path="register" element={<Register/>}/>
         <Route path="findteam" element={<FindTeam/>}/>
         <Route path='tableadd' element={<TableAdd/>}/>
+<<<<<<< HEAD
         <Route path='score' element={<ScorePage/>}/>
         <Route path='scorePrev' element={<ScorePrevPage/>}/>
+=======
+        <Route path='scorePrev' element={<ScorePrevPage/>}/>
+        <Route path='score' element={<ScorePage/>}/>
+        <Route path='chat' element={<IdInputPage/>}/>
+        <Route path="/:roomId" element={<ChatRoomPage/>} />
+>>>>>>> brchS
       </Routes>
     </Router>
   );
