@@ -1,4 +1,4 @@
-.UserImg{
+.InfoUserImg{
     position: absolute;
     width: 250px;
     height: 250px;
@@ -10,7 +10,7 @@
     border-radius: 7px;
 }
 
-.UserName{
+.InfoUserName{
     position: absolute;
     left: 550px;
     top: 445px;
@@ -25,7 +25,7 @@
     border-radius: 3px;
     padding-left : 10px;
 }
-.UserMail{
+.InfoUserMail{
     position: absolute;
     height: 15px;
     width: 235px;
@@ -35,7 +35,7 @@
     text-align : left;
     padding: 7px;
 }
-.UserParticipation{
+.InfoUserParticipation{
     position: absolute;
     height: 159px;
     left: 1000px;    
@@ -43,7 +43,7 @@
     font-size:100px;
     text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
-.Participation{
+.InfoParticipation{
     position: absolute;
     height: 159px;
     left: 1000px;
@@ -51,7 +51,7 @@
     font-size:50px;
     text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
-.Frame{
+.InfoFrame{
     position: absolute;
     width: 350px;
     height: 460px;
@@ -63,9 +63,9 @@
     border-radius: 10px;
     z-index:-1;
 }
-.Comment1{
+.InfoComment1{
     position: absolute;
-    height: 15px;
+    height: 31px;
     line-height: 15px;
     left: 480px;
     right: 500px;
@@ -77,9 +77,9 @@
     border-radius: 3px;
     padding: 7px;
 }
-.Comment2{
+.InfoComment2{
     position: absolute;
-    height: 15px;
+    height: 31px;
     line-height: 15px;
     left: 480px;
     right: 500px;
@@ -91,9 +91,9 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     border-radius: 3px;
 }
-.Comment3{
+.InfoComment3{
     position: absolute;
-    height: 15px;
+    height: 31px;
     line-height: 15px;
     left: 480px;
     right: 500px;
@@ -105,7 +105,7 @@
     border-radius: 3px;
     padding: 7px;
 }
-.Frame2{
+.InfoFrame2{
     position: absolute;
     height: 200px;
     line-height: 15px;
@@ -118,7 +118,7 @@
     border-radius: 10px;
     z-index:-1;
 }
-.t1{
+.Infot1{
     position: absolute;
     height: 25px;
     left: 500px;
@@ -132,11 +132,11 @@
     text-align: center;
     color: rgb(65, 65, 65);
 }
-.t2{
+.Infot2{
     position: absolute;
-    height: 23.49px;
+    height: 23px;
     left: 480px;
-    right: 955.56px;
+    right: 955px;
     top: 660px;
     font-family: Inter;
     font-style: normal;
@@ -145,5 +145,5 @@
     line-height: 20px;
     display: flex;
     align-items: center;
-    color: rgba(0, 0, 0, 0.56);
+    color: rgba(0, 0, 0, 0);
 }

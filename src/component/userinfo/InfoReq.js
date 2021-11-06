@@ -1,5 +1,5 @@
 import React from 'react'
-import './UserReq.css'
+import './InfoReq.css'
 export default function ({num,user}) {
     var sampleUserName = "Panda Kim"
     var sampleUserMail = "UNID_team4_nibble@gmail.com"
@@ -22,37 +22,32 @@ export default function ({num,user}) {
     if(user!=1) pageOwner = sampleUserName+ "'s page";
     switch(num)
     {
-        case 'ChangeVal':
-            return(
-                LatestComment3 = LatestComment2,
-                LatestComment2 = LatestComment1,
-                LatestComment1=user);
         case 'UserInfo':
         return( <div>
-            <img className = "UserImg" src={ImageUrl} />
-            <box className='UserName'>{sampleUserName}</box>
-            <box className='UserMail'>{sampleUserMail}</box>
+            <img className = "InfoUserImg" src={ImageUrl} />
+            <box className='InfoUserName'>{sampleUserName}</box>
+            <box className='InfoUserMail'>{sampleUserMail}</box>
             </div>); 
 
         case 'Participation':
         return( <div>
-            <box className='Participation'>participation</box>
-            <box className='UserParticipation'>{sampleParticipation}</box>
+            <box className='InfoParticipation'>participation</box>
+            <box className='InfoUserParticipation'>{sampleParticipation}</box>
             </div>);
 
         case 'Frame': 
         return( <div>
-            <box className='Frame'></box> 
-            <box className='t1'>{pageOwner}</box>
-            <box className='t2'>Latest Comments</box>
-            <box className='Frame2'></box>
+            <box className='InfoFrame'></box> 
+            <box className='Infot1'>{pageOwner}</box>
+            <box className='Infot2'>Latest Comments</box>
+            <box className='InfoFrame2'></box>
             </div>);
 
         case 'Comment' : 
         return( <div>
-                <box className= 'Comment1'>{LatestComment1}</box>
-                <box className= 'Comment2'>{LatestComment2}</box>
-                <box className= 'Comment3'>{LatestComment3}</box>
+                <box className= 'InfoComment1'>{LatestComment1}</box>
+                <box className= 'InfoComment2'>{LatestComment2}</box>
+                <box className= 'InfoComment3'>{LatestComment3}</box>
                 </div>);
     }
 }
